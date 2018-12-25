@@ -660,14 +660,14 @@
 	
 		//Portfolio
 		portfolio:function() {
-			if ($('.portfolio-item').length===0) {
+			if ($('.projects-item').length===0) {
 				return;
 			}
 			
 			var that = this;
 	
 			var calculatePortfolioItems = function() {
-				var sizes = {lg:6, md:6, sm:4, xs:2}, $that = $('.portfolio-items'),
+				var sizes = {lg:6, md:6, sm:4, xs:2}, $that = $('.projects-items'),
 					w = $(window).width(), onLine = 0, value = 0;
 	
 				if ($that.attr('data-on-line-lg')>0) {sizes.lg = parseInt($that.attr('data-on-line-lg'), 10);}
@@ -686,7 +686,7 @@
 				}
 	
 				value = Math.floor(w/onLine);
-				$('.portfolio-item').css({width:value+'px', height:value+'px'});
+				$('.projects-item').css({width:value+'px', height:value+'px'});
 			};
 	
 			$(window).on('resize', function() {
@@ -697,42 +697,42 @@
 				calculatePortfolioItems();
 				
 				//Isotope
-				$('.portfolio-items').isotope({
-				  	itemSelector:'.portfolio-item',
+				$('.projects-items').isotope({
+				  	itemSelector:'.projects-item',
 					layoutMode:'fitRows'
 				});
 
-				var $items = $('.portfolio-items').isotope();
+				var $items = $('.projects-items').isotope();
 
 				//Filter items on button click
-				$('.portfolio-filters').on('click', 'span', function() {
+				$('.projects-filters').on('click', 'span', function() {
 					var filter = $(this).data('filter');
 					$items.isotope({filter:filter});
 				});
 
-				$('.portfolio-filters').on('click', 'span', function() {
+				$('.projects-filters').on('click', 'span', function() {
 					$(this).addClass("active").siblings().removeClass('active');
 				});
 			});
 			
 			var closeProject = function() {
-				$('#portfolio-details').animate({opacity:0}, {duration:600, queue:false, complete:function() {
+				$('#projects-details').animate({opacity:0}, {duration:600, queue:false, complete:function() {
 					$(this).hide().html('').removeAttr('data-current');
 				}});
 			};
 			
 			//Portfolio details
-			$('.portfolio-item a').on("click", function(e) {
+			$('.projects-item a').on("click", function(e) {
 				e.preventDefault();
 				var $that = $(this);
-				var $item = $that.closest(".portfolio-item");
+				var $item = $that.closest(".projects-item");
 				
 				if ($item.find('.loading').length===0) {
 					$('<div />').addClass('loading').appendTo($item);
 					$that.parent().addClass('active');
 	
 					var $loading = $item.find('.loading'),
-						$container = $('#portfolio-details'),
+						$container = $('#projects-details'),
 						timer = 1;
 	
 					if ($container.is(':visible')) {
@@ -776,7 +776,7 @@
 				e.preventDefault();
 			});
 	
-			$(document.body).on('click', '#portfolio-details .icon.close i', function() {
+			$(document.body).on('click', '#projects-details .icon.close i', function() {
 				closeProject();
 			});
 	

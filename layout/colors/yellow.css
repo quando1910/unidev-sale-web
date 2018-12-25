@@ -26,8 +26,8 @@ section.parallax .feature-single:hover .icon,
 .btn.btn-link,
 .btn.btn-inverse,
 .btn-read-more,
-.portfolio-filters span:hover,
-.portfolio-filters span.active,
+.projects-filters span:hover,
+.projects-filters span.active,
 .sidebar ul.menu li a:hover, 
 .sidebar ul.menu li a:focus,
 .sidebar ul.links li a:hover, 
@@ -75,7 +75,7 @@ footer .to-top:hover {
 
 .navbar .navbar-toggle:hover .icon-bar,
 .btn.btn-default,
-.portfolio-item .loading,
+.projects-item .loading,
 .progress .progress-bar,
 .dropcap.alt,
 .highlight,
@@ -110,7 +110,7 @@ footer .to-top {
 
 blockquote,
 .intro .mouse:hover,
-.portfolio-filters span.active,
+.projects-filters span.active,
 input:focus,
 textarea:focus,
 .tags .tag:hover, 
@@ -125,7 +125,7 @@ textarea.notice {
 	border-color:#e4d20c !important;
 }
 
-.portfolio-filters a.active {
+.projects-filters a.active {
 	background-color:#e4d20c !important;
 }
 

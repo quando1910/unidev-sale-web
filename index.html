@@ -103,7 +103,7 @@
 						<li class="active"><a href="#intro">Home</a></li>
 						<li><a href="#about">About</a></li>
 						<li><a href="#categories">Categories</a></li>
-						<li><a href="#portfolio">Projects</a></li>
+						<li><a href="#projects">Projects</a></li>
 						<li><a href="#services">Services</a></li>
 						<li><a href="#blog">Blog</a></li>
 						<li><a href="#contact">Contact</a></li>
@@ -446,99 +446,12 @@
 							</div>
 						</div>
 					</div>
-
-					<!-- Member 1 -->
-					<!-- <div class="col-md-3">
-						<div class="categories-member res-margin">
-							<div class="categories-image">
-								<img src="images/team/member-1.jpg" alt="" />
-								<div class="categories-social">
-									<div class="categories-social-inner">
-										<a href="#"><i class="fa fa-twitter"></i></a>
-										<a href="#"><i class="fa fa-facebook"></i></a>
-										<a href="#"><i class="fa fa-linkedin"></i></a>
-										<a href="#"><i class="fa fa-dribbble"></i></a>
-									</div>
-								</div>
-							</div>
-							<div class="categories-details">
-								<h5 class="title">Hotel & Homestay</h5>
-								<span class="position">Web Designer</span>
-							</div>
-						</div>
-					</div> -->
-
-					<!-- Member 2 -->
-					<!-- <div class="col-md-3">
-						<div class="categories-member res-margin">
-							<div class="categories-image">
-								<img src="images/team/member-2.jpg" alt="" />
-								<div class="categories-social">
-									<div class="categories-social-inner">
-										<a href="#"><i class="fa fa-twitter"></i></a>
-										<a href="#"><i class="fa fa-facebook"></i></a>
-										<a href="#"><i class="fa fa-linkedin"></i></a>
-										<a href="#"><i class="fa fa-dribbble"></i></a>
-									</div>
-								</div>
-							</div>
-							<div class="categories-details">
-								<h5 class="title">Cafe & Food</h5>
-								<span class="position">CEO Founder</span>
-							</div>
-						</div>
-					</div> -->
-
-					<!-- Member 3 -->
-					<!-- <div class="col-md-3">
-						<div class="categories-member res-margin">
-							<div class="categories-image">
-								<img src="images/team/member-3.jpg" alt="" />
-								<div class="categories-social">
-									<div class="categories-social-inner">
-										<a href="#"><i class="fa fa-twitter"></i></a>
-										<a href="#"><i class="fa fa-facebook"></i></a>
-										<a href="#"><i class="fa fa-linkedin"></i></a>
-										<a href="#"><i class="fa fa-dribbble"></i></a>
-									</div>
-								</div>
-							</div>
-							<div class="categories-details">
-								<h5 class="title">Wedding</h5>
-								<span class="position">App Developer</span>
-							</div>
-						</div>
-					</div> -->
-
-					<!-- Member 4 -->
-					<!-- <div class="col-md-3">
-						<div class="categories-member">
-							<div class="categories-image">
-								<img src="images/team/member-4.jpg" alt="" />
-								<div class="categories-social">
-									<div class="categories-social-inner">
-										<a href="#"><i class="fa fa-twitter"></i></a>
-										<a href="#"><i class="fa fa-facebook"></i></a>
-										<a href="#"><i class="fa fa-linkedin"></i></a>
-										<a href="#"><i class="fa fa-dribbble"></i></a>
-									</div>
-								</div>
-							</div>
-							<div class="categories-details">
-								<h5 class="title">Other Business</h5>
-								<span class="position">Creative Director</span>
-							</div>
-						</div>
-					</div>
-
-				</div> -->
-
 				</div>
 
 		</section>
 
-		<!-- Portfolio -->
-		<section id="portfolio" class="portfolio bg-grey">
+		<!-- Projects -->
+		<section id="projects" class="projects bg-grey">
 
 			<!-- Container -->
 			<div class="container">
@@ -551,9 +464,7 @@
 							<h2 data-bigletter="R">Recent Projects</h2>
 							<hr>
 							<p>
-								Phasellus metus arcu, aliquam vitae pulvinar eget, placerat pellentesque risus.
-								Fusce urna nisi, euismod non semper in.
-								Sagittis fermentum non urna.
+								{{content}}
 							</p>
 						</div>
 
@@ -563,11 +474,8 @@
 				<div class="row">
 
 					<!-- Filter links -->
-					<div class="portfolio-filters text-center col-sm-12">
-						<span data-filter="*" class="active">All</span>
-						<span data-filter=".brand">Cafe & Food</span>
-						<span data-filter=".web">Hotel & Homestay</span>
-						<span data-filter=".photography">Wedding</span>
+					<div class="projects-filters text-center col-sm-12">
+						<span :data-filter="link.filter" :class="link.clActive" v-for="link in filterLinks">{{link.name}}</span>
 					</div>
 
 				</div>
@@ -576,118 +484,19 @@
 
 			<div class="container-fluid">
 
-				<div class="row portfolio-items clearfix" data-on-line-lg="4" data-on-line-md="4" data-on-line-sm="4"
+				<div class="row projects-items clearfix" data-on-line-lg="4" data-on-line-md="4" data-on-line-sm="4"
 				 data-on-line-xs="2">
 
 					<!-- Project 1 -->
-					<div>
-						<div class="portfolio-item brand">
-							<img src="images/portfolio/project-1.jpeg" alt="Poster Frame">
+					<div v-for="project in projects">
+						<div class="projects-item" :class="project.clFilter">
+							<img :src="project.srmImg" :alt="project.title">
 							<div class="img-overlay valign">
 								<div class="overlay-info full-width vertical-center">
-									<h6>Poster Frame</h6>
-									<p>Branding</p>
+									<h6>{{project.title}}</h6>
+									<p>{{project.category}}</p>
 								</div>
-								<a href="http://mutationmedia.net/COFFEEBEN/" data-rel="poster-frame"></a>
-							</div>
-						</div>
-					</div>
-
-					<!-- Project 2 -->
-					<div>
-						<div class="portfolio-item web">
-							<img src="images/portfolio/project-2.jpeg" alt="Elegant Site">
-							<div class="img-overlay valign">
-								<div class="overlay-info full-width vertical-center">
-									<h6>Elegant Site</h6>
-									<p>Web Design</p>
-								</div>
-								<a href="http://rn53themes.net/themes/demo/the-royal-hotel/main.html" data-rel="elegant-site"></a>
-							</div>
-						</div>
-					</div>
-
-					<!-- Project 3 -->
-					<div>
-						<div class="portfolio-item brand">
-							<img src="images/portfolio/project-3.jpeg" alt="Tri Fold Brochure">
-							<div class="img-overlay valign">
-								<div class="overlay-info full-width vertical-center">
-									<h6>Tri Fold Brochure</h6>
-									<p>Branding</p>
-								</div>
-								<a href="http://sun-themes.com/html/fooday/homepage2.html" data-rel="tri-fold-brochure"></a>
-							</div>
-						</div>
-					</div>
-
-					<!-- Project 4 -->
-					<div>
-						<div class="portfolio-item photography">
-							<img src="images/portfolio/project-4.jpeg" alt="Edith A5 Magazine">
-							<div class="img-overlay valign">
-								<div class="overlay-info full-width vertical-center">
-									<h6>Edith A5 Magazine</h6>
-									<p>Photography</p>
-								</div>
-								<a href="https://wedding-planner.freevision.me" data-rel="edith-a5-magazine"></a>
-							</div>
-						</div>
-					</div>
-
-					<!-- Project 5 -->
-					<div>
-						<div class="portfolio-item web">
-							<img src="images/portfolio/project-5.jpeg" alt="Motorcycle Helmet">
-							<div class="img-overlay valign">
-								<div class="overlay-info full-width vertical-center">
-									<h6>Motorcycle Helmet</h6>
-									<p>Web Design</p>
-								</div>
-								<a href="http://preview.themeforest.net/item/milenia-hotel-resort-website-template/full_screen_preview/22367370?_ga=2.84488089.1203946532.1545573055-510163875.1543542257"
-								 data-rel="motorcycle-helmet"></a>
-							</div>
-						</div>
-					</div>
-
-					<!-- Project 6 -->
-					<div>
-						<div class="portfolio-item brand">
-							<img src="images/portfolio/project-6.jpeg" alt="Plastic Pouch">
-							<div class="img-overlay valign">
-								<div class="overlay-info full-width vertical-center">
-									<h6>Plastic Pouch</h6>
-									<p>Branding</p>
-								</div>
-								<a href="http://craftedpixels.net/demo-html/baker-coffee-html/" data-rel="plastic-pouch"></a>
-							</div>
-						</div>
-					</div>
-
-					<!-- Project 7 -->
-					<div>
-						<div class="portfolio-item brand">
-							<img src="images/portfolio/project-7.jpeg" alt="Brand Minute">
-							<div class="img-overlay valign">
-								<div class="overlay-info full-width vertical-center">
-									<h6>Brand Minute</h6>
-									<p>Branding</p>
-								</div>
-								<a href="http://anpsthemes.com/demo/?theme=kataleya-html" data-rel="brand-minute"></a>
-							</div>
-						</div>
-					</div>
-
-					<!-- Project 8 -->
-					<div>
-						<div class="portfolio-item brand">
-							<img src="images/portfolio/project-8.jpeg" alt="Jones Photography">
-							<div class="img-overlay valign">
-								<div class="overlay-info full-width vertical-center">
-									<h6>Jones Photography</h6>
-									<p>Web Design</p>
-								</div>
-								<a href="http://templates.aucreative.co/yumi/index.html" data-rel="jones-photography"></a>
+								<a :href="project.linkWeb" data-rel="poster-frame"></a>
 							</div>
 						</div>
 					</div>
@@ -698,8 +507,8 @@
 
 		</section>
 
-		<!-- Portfolio details (AJAX) -->
-		<section id="portfolio-details"></section>
+		<!-- Projects details (AJAX) -->
+		<section id="projects-details"></section>
 
 		<!-- Info box -->
 		<section class="info-box">

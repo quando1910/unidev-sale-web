@@ -22,7 +22,7 @@ Profile:	https://themeforest.net/user/athenastudio
 	10.	Clients
 	11.	Buttons
 	12.	Inputs, Textareas
-	13.	Portfolio
+	13.	Projects
 	14.	Info box
 	15.	Our team
 	16.	Contact
@@ -1217,18 +1217,18 @@ iframe {
 }
 
 /************************
-    - 13. Portfolio -
+    - 13. Projects -
 ************************/
-.portfolio {
+.projects {
 	overflow:hidden;
 }
 
-.portfolio .container {
+.projects .container {
 	padding-bottom:30px;
 }
 
 /* Filter */
-.portfolio-filters span {
+.projects-filters span {
 	display:inline-block;
 	padding:3px 20px;
 	font-weight:600;
@@ -1240,12 +1240,12 @@ iframe {
 }
 
 /* Items */
-.portfolio-item {
+.projects-item {
 	position:relative;
 	overflow:hidden;
 }
 
-.portfolio-item a {
+.projects-item a {
 	z-index:3;
 	display:block;
 	position:absolute;
@@ -1255,7 +1255,7 @@ iframe {
 	left:0;
 }
 
-.portfolio-item img {
+.projects-item img {
 	width:100%;
 	height:100%;
 	-webkit-transition:all 0.3s;
@@ -1263,29 +1263,29 @@ iframe {
 			transition:all 0.3s;
 }
 
-.portfolio-item:hover img {
+.projects-item:hover img {
 	-webkit-transform:scale(1.12);
 	   -moz-transform:scale(1.12);
 			transform:scale(1.12);
 }
 
-.portfolio-item .overlay-info {
+.projects-item .overlay-info {
 	text-align:center;
 }
 
-.portfolio-item h6 {
+.projects-item h6 {
 	position:relative;
 	margin-bottom:5px;
 	transform:translateY(-15px);
 	transition:all .5s;
 }
 
-.portfolio-item:hover h6 {
+.projects-item:hover h6 {
 	transform:translateY(0);
 }
 
 /* Overlay */
-.portfolio-item .img-overlay {
+.projects-item .img-overlay {
 	position:absolute;
 	z-index:2;	
 	top:5px;
@@ -1303,13 +1303,13 @@ iframe {
 			transition:all 0.3s;
 }
 
-.portfolio-item:hover .img-overlay {
+.projects-item:hover .img-overlay {
 	opacity:1;
 	transform:translateY(0);
 }
 
 /* Loading */
-.portfolio-item .loading {
+.projects-item .loading {
 	z-index:4;
 	position:absolute;
 	width:0;
@@ -1319,16 +1319,16 @@ iframe {
 }
 
 /* Details */
-#portfolio-details {
+#projects-details {
 	display:none;
 	border-bottom:1px solid #f1f1f1;
 }
 
-#portfolio-details .section-title p {
+#projects-details .section-title p {
 	margin-bottom:20px;
 }
 
-#portfolio-details h4 {
+#projects-details h4 {
 	margin-bottom:20px;
 }
 
