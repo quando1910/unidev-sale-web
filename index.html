@@ -766,11 +766,14 @@
 						<!-- Media -->
 						<div class="block-media row">
 							<div class="carousel-images testimonial-nav col-sm-8 col-sm-offset-2">
-								<div>
-									<img src="images/testimonials/client-1.jpg" alt="" class="img-responsive img-circle">
-									<div class="client-info">
-										<h3>Martin Jack</h3>
-										<span>From Hooli</span>
+
+								<div v-for="client in clients">
+									<div>
+										<img src="images/testimonials/client-1.jpg" alt="" class="img-responsive img-circle">
+										<div class="client-info">
+											<h3>Martin Jack</h3>
+											<span>From Hooli</span>
+										</div>
 									</div>
 								</div>
 								<div>

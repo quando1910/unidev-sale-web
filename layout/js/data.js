@@ -110,3 +110,46 @@ var projects = new Vue({
 
   }
 })
+
+var testimonials = new Vue({
+  el: '#testimonials',
+  data: {
+    content: "Donec purus est, tincidunt eu sodales quis, vehicula quis enim. Morbi dapibus, tellus a gravida faucibus, elit ipsum sollicitudin risus, id ultricies arcu neque eget velit.",
+    clients: [
+      {
+        srcImg: "images/testimonials/client-1.jpg",
+        name: "Thap Nguyen",
+        from: "Da Nang",
+      },{
+        imgClient: "images/testimonials/client-2.jpg",
+        name: "Hoang Nguyen",
+        from: "Ho Chi Minh",
+      },{
+        imgClient: "images/testimonials/client-3.jpg",
+        name: "Anh Nguyen",
+        from: "Da Nang",
+      },{
+        imgClient: "images/testimonials/client-4.jpg",
+        name: "Khanh Doan",
+        from: "Hue",
+      },{
+        imgClient: "images/testimonials/client-5.jpg",
+        name: "Yen Ho",
+        from: "Hue",
+      },{
+        imgClient: "images/testimonials/client-6.jpg",
+        name: "Tien Duong",
+        from: "Quang Nam",
+      }
+    ],
+    comments: [
+      " Aenean sit amet est orci. Aenean at nisi eget nulla lobortis commodo. Nameget lorem in ex aliquam dapibus. ",
+      " Suspendisse non velit lacus. Mauris efficitur lorem a justo semper, ut suscipit ligula malesuada. Donec dui nulla. ",
+      " Aenean sit amet est orci. Aenean at nisi eget nulla lobortis commodo. Nameget lorem in ex aliquam dapibus. ",
+      " Suspendisse non velit lacus. Mauris efficitur lorem a justo semper, ut suscipit ligula malesuada. Donec dui nulla. ",
+      " Aenean sit amet est orci. Aenean at nisi eget nulla lobortis commodo. Nameget lorem in ex aliquam dapibus. ",
+      " Suspendisse non velit lacus. Mauris efficitur lorem a justo semper, ut suscipit ligula malesuada. Donec dui nulla. ",
+    ]
+  }
+})
+console.log(123);
