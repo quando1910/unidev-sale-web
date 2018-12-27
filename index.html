@@ -134,7 +134,7 @@
 						<div class="row">
 							<div class="col-md-12">
 								<header>
-									<h1 class="animate fadeInRight lowercase">We build<br>great brands.</h1>
+									<h1 class="animate fadeInRight lowercase">Chúng tôi tạo ra những sản phẩm tốt nhất</h1>
 								</header>
 							</div>
 						</div>
@@ -145,7 +145,7 @@
 						<div class="row">
 							<div class="col-md-12">
 								<header>
-									<h1 class="animate fadeInRight lowercase">Focused<br>on strategy.</h1>
+									<h1 class="animate fadeInRight lowercase">Chú trọng vào chiến lược.</h1>
 								</header>
 							</div>
 						</div>
@@ -157,7 +157,7 @@
 							<div class="col-md-12">
 								<header>
 									<h1 class="animate fadeInRight lowercase">
-										Advanced in<br>digital works.
+										Chuyên nghiệp trong công việc
 									</h1>
 								</header>
 							</div>
@@ -417,7 +417,7 @@
 
 						<!-- Section title -->
 						<div class="section-title text-center">
-							<h2 data-bigletter="O">Our Categories</h2>
+							<h2 data-bigletter="L">{{title}}</h2>
 							<hr>
 							<p>
 								{{content}}
@@ -461,7 +461,7 @@
 
 						<!-- Section title -->
 						<div class="section-title text-center">
-							<h2 data-bigletter="R">Recent Projects</h2>
+							<h2 data-bigletter="S">{{title}}</h2>
 							<hr>
 							<p>
 								{{content}}
@@ -489,7 +489,7 @@
 
 					<!-- Project 1 -->
 					<div v-for="project in projects">
-						<div class="projects-item" :class="project.clFilter">
+						<div class="projects-item" :class="project.filter">
 							<img :src="project.srmImg" :alt="project.title">
 							<div class="img-overlay valign">
 								<div class="overlay-info full-width vertical-center">
@@ -516,11 +516,11 @@
 				<div class="row">
 
 					<div class="col-lg-6 col-md-6 col-sm-6 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 text-center-xs">
-						<h3 class="lowercase">Do you have any ideas?</h3>
+						<h3 class="lowercase">Bạn muốn có một website chuyên nghiệp?</h3>
 					</div>
 
 					<div class="col-lg-4 col-md-3 col-sm-4 pull-right text-center-xs">
-						<a href="#contact" class="btn btn-default">Contact Us</a>
+						<a href="#contact" class="btn btn-default">Hãy liên lạc với chúng tôi</a>
 					</div>
 
 				</div>
@@ -538,12 +538,10 @@
 
 						<!-- Section title -->
 						<div class="section-title text-center">
-							<h2 data-bigletter="S">Services</h2>
+							<h2 data-bigletter="D">{{title}}</h2>
 							<hr>
 							<p>
-								Nullam ac enim auctor, fringilla risus at, imperdiet turpis.
-								Pellentesque elementum libero enim, eget gravida nunc laoreet et.
-								Pellentesque elementum libero enim.
+								{{content}}
 							</p>
 						</div>
 
@@ -553,42 +551,13 @@
 				<div class="row">
 
 					<!-- Service 1 -->
-					<div class="col-md-4 col-sm-6">
+					<div class="col-md-4 col-sm-6" v-for="service in services">
 						<div class="service-single clearfix res-margin">
 							<div class="icon icon-basic-laptop"></div>
 							<div class="service-text">
-								<h3>Responsive Layout</h3>
+								<h3>{{service.name}}</h3>
 								<p>
-									Ferri reque integre mea ut, eu eos vide errem noluise se.
-									Putent laoreet et ius utroque dissentias ut.
-								</p>
-							</div>
-						</div>
-					</div>
-
-					<!-- Service 2 -->
-					<div class="col-md-4 col-sm-6">
-						<div class="service-single clearfix res-margin">
-							<div class="icon icon-basic-pencil-ruler-pen"></div>
-							<div class="service-text">
-								<h3>Modern Design</h3>
-								<p>
-									Ferri reque integre mea ut, eu eos vide errem noluise se.
-									Putent laoreet et ius utroque dissentias ut.
-								</p>
-							</div>
-						</div>
-					</div>
-
-					<!-- Service 3 -->
-					<div class="col-md-4 col-sm-6">
-						<div class="service-single clearfix res-margin">
-							<div class="icon icon-basic-flag1"></div>
-							<div class="service-text">
-								<h3>Font Awesome Icons</h3>
-								<p>
-									Ferri reque integre mea ut, eu eos vide errem noluise se.
-									Putent laoreet et ius utroque dissentias ut.
+									{{service.description}}
 								</p>
 							</div>
 						</div>
@@ -600,96 +569,17 @@
 
 				<div class="row">
 
-					<!-- Service 4 -->
-					<div class="col-md-4 col-sm-6">
+					<div class="col-md-4 col-sm-6" v-for="service in services1">
 						<div class="service-single clearfix res-margin">
-							<div class="icon icon-basic-postcard-multiple"></div>
+							<div class="icon icon-basic-laptop"></div>
 							<div class="service-text">
-								<h3>Ajax Portfolio</h3>
+								<h3>{{service.name}}</h3>
 								<p>
-									Ferri reque integre mea ut, eu eos vide errem noluise se.
-									Putent laoreet et ius utroque dissentias ut.
+									{{service.description}}
 								</p>
 							</div>
 						</div>
 					</div>
-
-					<!-- Service 5 -->
-					<div class="col-md-4 col-sm-6">
-						<div class="service-single clearfix res-margin">
-							<div class="icon icon-basic-gear"></div>
-							<div class="service-text">
-								<h3>Color Options</h3>
-								<p>
-									Ferri reque integre mea ut, eu eos vide errem noluise se.
-									Putent laoreet et ius utroque dissentias ut.
-								</p>
-							</div>
-						</div>
-					</div>
-
-					<!-- Service 6 -->
-					<div class="col-md-4 col-sm-6">
-						<div class="service-single clearfix res-margin">
-							<div class="icon icon-basic-headset"></div>
-							<div class="service-text">
-								<h3>Audio Support</h3>
-								<p>
-									Ferri reque integre mea ut, eu eos vide errem noluise se.
-									Putent laoreet et ius utroque dissentias ut.
-								</p>
-							</div>
-						</div>
-					</div>
-
-				</div>
-
-				<div class="empty-30 hidden-xs"></div>
-
-				<div class="row">
-
-					<!-- Service 7 -->
-					<div class="col-md-4 col-sm-6">
-						<div class="service-single clearfix res-margin">
-							<div class="icon icon-basic-todolist-pen"></div>
-							<div class="service-text">
-								<h3>Well Documented</h3>
-								<p>
-									Ferri reque integre mea ut, eu eos vide errem noluise se.
-									Putent laoreet et ius utroque dissentias ut.
-								</p>
-							</div>
-						</div>
-					</div>
-
-					<!-- Service 8 -->
-					<div class="col-md-4 col-sm-6">
-						<div class="service-single clearfix res-margin">
-							<div class="icon icon-basic-video"></div>
-							<div class="service-text">
-								<h3>Background Videos</h3>
-								<p>
-									Ferri reque integre mea ut, eu eos vide errem noluise se.
-									Putent laoreet et ius utroque dissentias ut.
-								</p>
-							</div>
-						</div>
-					</div>
-
-					<!-- Service 9 -->
-					<div class="col-md-4 col-sm-6">
-						<div class="service-single clearfix res-margin">
-							<div class="icon icon-basic-mixer2"></div>
-							<div class="service-text">
-								<h3>Intro Slider</h3>
-								<p>
-									Ferri reque integre mea ut, eu eos vide errem noluise se.
-									Putent laoreet et ius utroque dissentias ut.
-								</p>
-							</div>
-						</div>
-					</div>
-
 				</div>
 
 			</div>

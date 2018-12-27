@@ -1,29 +1,30 @@
 var categories = new Vue({
   el: '#categories',
   data: {
-    content: 'Vestibulum ante ipsum primis in faucibus orci. Morbi tincidunt urna imperdiet tincidunt rhoncus. Sed mollis ligula non massa aliquam faucibus.',
+    title: "Lĩnh vực chính",
+    content: 'Để đem đến sự hài lòng tốt nhất cho khách hàng chúng tôi tập trung vào 4 chủ đề chính',
     categories: [
       {
         id: "1",
-        title: "Hotel & Homestay",
+        title: "Khách sạn & Homestay",
         srcImg: "images/team/member-1.jpg",
         altImg: "Hotel & Homestay"
       },
       {
         id: "2",
-        title: "Cafe & Food",
+        title: "Nhà hàng, cà phê",
         srcImg: "images/team/member-2.jpg",
         altImg: "Cafe & Food"
       },
       {
         id: "3",
-        title: "Wedding",
+        title: "Đám cưới",
         srcImg: "images/team/member-3.jpg",
         altImg: "Wedding"
       },
       {
         id: "4",
-        title: "Other Business",
+        title: "Kinh doanh",
         srcImg: "images/team/member-4.jpg",
         altImg: "Other Business"
       },
@@ -35,23 +36,24 @@ var categories = new Vue({
 var projects = new Vue({
   el: '#projects',
   data: {
-    content: 'Phasellus metus arcu, aliquam vitae pulvinar eget, placerat pellentesque risus. Fusce urna nisi, euismod non semper in. Sagittis fermentum non urna.',
+    title: "Những sản phẩm mẫu",
+    content: 'Với thời gian làm việc không ngắn chúng tôi đã mang lại cho khách hàng những sản phẩm tốt nhất có thể. Đây là một số sản phẩm thực tế và mẫu để bạn có thể tham khảo',
     filterLinks: [
       {
         filter: "*",
-        name: "All",
+        name: "Tất cả",
         clActive: "active"
       },{
         filter: ".cafe",
-        name: "Cafe & Food",
+        name: "Nhà hàng, cà phê",
         clActive: ""
       },{
         filter: ".hotel",
-        name: "Hotel & Homestay",
+        name: "Khách sạn & Homestay",
         clActive: ""
       },{
         filter: ".wedding",
-        name: "Wedding",
+        name: "Đám cưới",
         clActive: ""
       },
     ],
@@ -108,5 +110,43 @@ var projects = new Vue({
       
     ]
 
+  }
+})
+
+var services = new Vue({
+  el: "#services",
+  data: {
+    title: "Dịch vụ cung cấp",
+    content: "Để sản phẩm của các bạn được tốt nhất, chúng tôi cung cấp những dịch vụ và chức năng giúp website của bạn hiện đại và tối ưu hơn",
+    services:[
+      {
+        name: "Responsive Layout",
+        description: "Giúp website của bạn hầu như có thể sử dụng trên mọi kích thước màn hình",
+        icon: "icon icon-basic-laptop",
+      },{
+        name: "Modern Design",
+        description: "Thiết kế hiện đại trang nhã nhằm giúp khách hàng trải nghiệm website của bạn được tốt hơn",
+        icon: "icon icon-basic-pencil-ruler-pen",
+      },{
+        name: "Font Awesome Icons",
+        description: "Hỗ trợ hơn 400 icon giúp website càng thú vị hơn",
+        icon: "icon icon-basic-flag1",
+      },
+    ],
+    services1: [
+      {
+        name: "Color Options",
+        description: "Màu sắc không giới hạn và với sự tư vấn nhiệt tình sẽ giúp bạn chọn được màu ưng ý nhất website của mình",
+        icon: "icon icon-basic-gear",
+      },{
+        name: "Background Videos",
+        description: "Không chỉ hỗ trợ hình ảnh mà còn hỗ trợ video giúp cho việc quản bá thương hiệu của bạn càng trở nên đơn giản hơn",
+        icon: "icon icon-basic-video",
+      },{
+        name: "Audio Support",
+        description: "Với những bản nhạc chạy nền hoặc làm một website âm nhạc tất cả đều trở nên đơn giản",
+        icon: "icon icon-basic-headset",
+      },
+    ]
   }
 })
