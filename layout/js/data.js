@@ -150,3 +150,15 @@ var services = new Vue({
     ]
   }
 })
+
+var contact = new Vue({
+  el: "#contact",
+  data: {
+    title: "Liên hệ",
+    content: "Chuyên nghiệp và tận tình chúng tôi luôn cam đoan đem đến sản phẩm tốt nhất với mức giá hợp lý.",
+    answers: "Hãy liên hệ với chúng tôi để nhận được những lời khuyên tốt nhất cho website của bạn.",
+    address: "42 Tống Phước Phổ - P. Hòa Cường Bắc - Q. Hải Châu - TP. Đà Nẵng .",
+    phone: "+84 773 420 210 - +84 905 700 194",
+    mail: "quando@sitename.com"
+  }
+})
